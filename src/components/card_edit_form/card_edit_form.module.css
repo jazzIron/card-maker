@@ -1,4 +1,4 @@
-@value makerBlack, makerLightGrey from '../../common/colors.css';
+@value makerWhite, makerBlack, makerLightGrey from '../../common/colors.css';
 
 .form {
   display: flex;
@@ -23,7 +23,7 @@
   background: makerWhite;
 }
 
-.imput,
+.input,
 .select {
   flex: 1 1 30%;
 }
