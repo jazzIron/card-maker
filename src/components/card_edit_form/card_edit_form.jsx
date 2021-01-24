@@ -10,16 +10,7 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
   const emailRef = useRef();
   const messageRef = useRef();
 
-  const {
-    name,
-    company,
-    title,
-    email,
-    message,
-    theme,
-    fileName,
-    fileURL,
-  } = card;
+  const { name, company, title, email, message, theme, fileName } = card;
 
   const onFileChange = (file) => {
     updateCard({
@@ -30,13 +21,8 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
   };
 
   const onChange = (event) => {
-    console.log(event);
-
-    if (event.currentTarget == null) {
-      return;
-    }
+    if (event.currentTarget == null) return;
     event.preventDefault();
-
     updateCard({
       ...card,
       [event.currentTarget.name]: event.currentTarget.value,
